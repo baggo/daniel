@@ -25,11 +25,13 @@ var name_previous = ''
 
 bot.on('message', msg => {
   var name = msg.member.displayName
-  var content = msg.content
+  var content = msg.cleanContent
   var message
 
   if (content === '') {
     message = name + ' uploaded media'
+  } else if (content.indexOf('https://') === 0 || content.indexOf('http://') === 0) {
+    message = name + ' posted a link'
   } else if (name === name_previous) {
     message = content
   } else {
