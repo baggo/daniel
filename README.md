@@ -1,3 +1,4 @@
 # daniel
+> Damn, Daniel.
 
-a crappy script to hack together an automatic tts bot
+Daniel is a short script to quickly setup an automated TTS bot in Discord. :robot:
